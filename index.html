@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dhaka Mohila Polytechnic Institute</title>
+
+  <!-- Bootstrap 3 CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      padding-top: 50px; /* space for fixed navbar */
+    }
+    /* Navbar */
+    .navbar {
+      background-color: #9036a7;
+      border: none;
+    }
+    .navbar-brand, .navbar-nav > li > a {
+      color: #fff !important;
+      font-weight: 500;
+    }
+    .navbar-brand:hover, .navbar-nav > li > a:hover {
+      color: #ffd700 !important;
+    }
+    .navbar-brand img {
+      border-radius: 50%;
+      border: 2px solid #fff;
+      margin-right: 8px;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('img/hero-bg.jpg') center center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    .hero h1 {
+      font-weight: 700;
+      font-size: 40px;
+    }
+
+    /* Section Title */
+    .section-title {
+      text-align: center;
+      font-weight: 700;
+      color: #7e2e92;
+      margin-bottom: 40px;
+    }
+
+    /* Departments */
+    .dept-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      transition: 0.3s;
+      text-align: center;
+      padding: 15px;
+    }
+    .dept-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .dept-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    /* Notice Section */
+    .notice {
+      background: #f9f9f9;
+      padding: 50px 0;
+    }
+    .notice-item {
+      background: #fff;
+      border-left: 5px solid #7e2e92;
+      padding: 15px;
+      margin-bottom: 10px;
+      transition: 0.3s;
+    }
+    .notice-item:hover {
+      background: #eaeaea;
+    }
+
+    /* Footer */
+    footer {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 25px 0;
+    }
+    footer a {
+      color: #ffd700;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <!-- Navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+
+    <!-- Brand and toggle -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+
+      <!-- ✅ Fixed brand alignment -->
+      <a class="navbar-brand" href="#" style="display:flex; align-items:center; gap:8px;">
+        <img src="image/images (1).jpeg" alt="DMPI Logo"
+             style="height:40px; width:40px; border-radius:50%; border:2px solid #fff;">
+        <span style="color:white; font-weight:600; font-size:16px;">Dhaka Mohila Polytechnic Institute</span>
+      </a>
+    </div>
+
+    <!-- Navbar Menu -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#departments">Departments</a></li>
+        <li><a href="#notices">Notice</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Dhaka Mohila Polytechnic Institute</h1>
+      <p>Empowering Women Through Technical and Vocational Education</p>
+      <a href="#about" class="btn btn-warning btn-lg">Explore More</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container text-center" style="padding:60px 0;">
+    <h2 class="section-title">About DMPI</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="image/images (3).jpeg" class="img-responsive img-rounded" alt="Campus">
+      </div>
+      <div class="col-md-6 text-left">
+        <p>
+          Dhaka Mohila Polytechnic Institute is a government technical institution dedicated to promoting
+          women's education in engineering and technology. Located in Sher-e-Bangla Nagar, Dhaka, it provides
+          diploma courses in multiple technologies, aiming to empower women for the future workforce.
+        </p>
+        <p>
+          The institute has modern facilities, expert teachers, and a peaceful campus that ensures quality
+          learning in a safe environment.
+        </p>
+        <a href="#" class="btn btn-primary">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Departments Section -->
+  <section id="departments" style="background:#f5f5f5; padding:60px 0;">
+    <div class="container">
+      <h2 class="section-title">Our Departments</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="dept-card">
+            <img src="img/dept_cst.jpg" alt="CST">
+            <h4>Computer Science & Technology</h4>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="dept-card">
+            <img src="img/dept_eee.jpg" alt="EEE">
+            <h4>Electrical Engineering</h4>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="dept-card">
+            <img src="img/dept_arch.jpg" alt="Architecture">
+            <h4>Architecture & Interior Design</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Notice Section -->
+  <section id="notices" class="notice">
+    <div class="container">
+      <h2 class="section-title">Notice Board</h2>
+      <div class="notice-item">📢 Admission Circular 2025 is now available.</div>
+      <div class="notice-item">📅 Semester Final Exam starts on 10 November 2025.</div>
+      <div class="notice-item">📄 Student Registration for new session is ongoing.</div>
+      <div class="text-center" style="margin-top:20px;">
+        <a href="#" class="btn btn-primary">View All Notices</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container text-center" style="padding:60px 0;">
+    <h2 class="section-title">Contact Us</h2>
+    <p><span class="glyphicon glyphicon-map-marker"></span> Sher-e-Bangla Nagar, Dhaka - 1208</p>
+    <p><span class="glyphicon glyphicon-envelope"></span> dhakamohilapoly@yahoo.com</p>
+    <p><span class="glyphicon glyphicon-earphone"></span> 01727317363</p>
+    <iframe src="https://www.google.com/maps?q=dhaka+mohila+polytechnic+institute&output=embed" width="100%" height="300" frameborder="0"></iframe>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Dhaka Mohila Polytechnic Institute. All Rights Reserved.</p>
+      <p>Designed & Developed by <a href="#">Your Name</a></p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 3 JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
