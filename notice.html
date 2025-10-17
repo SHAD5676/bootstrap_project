@@ -4,16 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Notice - Dhaka Mohila Polytechnic Institute</title>
+    <title>Dhaka Mohila Polytechnic Institute</title>
+
+    <!-- Bootstrap 3 CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            padding-top: 70px;
-            background: #f5f5f5;
+            padding-top: 50px;
+            /* space for fixed navbar */
         }
 
+        /* Navbar */
         .navbar {
             background-color: #9036a7;
             border: none;
@@ -30,6 +36,25 @@
             color: #ffd700 !important;
         }
 
+        .navbar-brand img {
+            border-radius: 50%;
+            border: 2px solid #fff;
+            margin-right: 8px;
+        }
+
+        /* Hero */
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('image/home-bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: 60%;
+            color: #fff;
+            text-align: center;
+            padding: 200px 20px;
+        }
+
+
+        /* Section Title */
         .section-title {
             text-align: center;
             font-weight: 700;
@@ -37,29 +62,48 @@
             margin-bottom: 40px;
         }
 
+        /* Departments */
+        .dept-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: 0.3s;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .dept-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .dept-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Notice Section */
+        .notice {
+            background: #f9f9f9;
+            padding: 50px 0;
+        }
+
         .notice-item {
             background: #fff;
             border-left: 5px solid #7e2e92;
-            padding: 20px;
-            margin-bottom: 15px;
+            padding: 15px;
+            margin-bottom: 10px;
             transition: 0.3s;
-            font-size: 16px;
         }
 
         .notice-item:hover {
             background: #eaeaea;
         }
 
-        .notice-date {
-            font-weight: bold;
-            color: #9036a7;
-            margin-right: 10px;
-        }
-
-        .btn-view-all {
-            margin-top: 20px;
-        }
-
+        /* Footer */
         footer {
             background: #1a1a1a;
             color: #fff;
@@ -70,59 +114,46 @@
         footer a {
             color: #ffd700;
         }
-
-        .archive,
-        .downloads,
-        .events {
-            margin-top: 50px;
-        }
-
-        .archive-item,
-        .download-item,
-        .event-item {
-            background: #fff;
-            padding: 15px;
-            border-left: 5px solid #7e2e92;
-            margin-bottom: 10px;
-            transition: 0.3s;
-        }
-
-        .archive-item:hover,
-        .download-item:hover,
-        .event-item:hover {
-            background: #eaeaea;
-        }
-
-        h4.section-subtitle {
-            color: #9036a7;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
     </style>
 </head>
 
 <body>
 
     <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
+
+            <!-- Brand and toggle -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Dhaka Mohila Polytechnic Institute</a>
+
+
+                <!-- ✅ Fixed brand alignment -->
+                <a class="navbar-brand" href="#" style="display:flex; align-items:center; gap:8px;">
+                    <img src="image/images (1).jpeg" alt="DMPI Logo"
+                        style="height:40px; width:40px; border-radius:50%; border:2px solid #fff;">
+                    <span style="color:white; font-weight:600; font-size:16px;">Dhaka Mohila Polytechnic
+                        Institute</span>
+                </a>
             </div>
+
+            <!-- Navbar Menu -->
             <div class="collapse navbar-collapse" id="mainNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="department.html">Departments</a></li>
-                    <li class="active"><a href="notice.html">Notice</a></li>
+                    <li><a href="notice.html">Notice</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+
             </div>
+
         </div>
     </nav>
 
@@ -135,26 +166,26 @@
             <div class="notice-item"><span class="notice-date">📅 10 Nov 2025</span> Semester Final Exam starts.</div>
             <div class="notice-item"><span class="notice-date">📄 20 Oct 2025</span> Student Registration ongoing.</div>
             <div class="notice-item"><span class="notice-date">💻 25 Oct 2025</span> Coding Competition (CST
-                Department).</div>
+                Department).</div> <br>
             <div class="text-center btn-view-all">
                 <a href="#" class="btn btn-primary btn-lg">View All Notices</a>
             </div>
         </div>
-    </section>
+    </section> <br><br><br>
 
     <!-- Upcoming Events -->
     <section class="events">
         <div class="container">
-            <h4 class="section-subtitle text-center">Upcoming Events</h4>
+            <h4 class="section-subtitle text-center">Upcoming Events</h4> <br>
             <div class="row">
                 <div class="col-md-4 event-item">🛠️ Workshop on Electrical Safety – 15 Oct 2025</div>
                 <div class="col-md-4 event-item">🎓 Graduation Ceremony – 30 Nov 2025</div>
                 <div class="col-md-4 event-item">💻 National Coding Challenge – 25 Oct 2025</div>
             </div>
         </div>
-    </section>
+    </section> <br><br>
 
-    <!-- Downloadable Notices -->
+    <!-- Downloadable Notices --> <br><br>
     <section class="downloads">
         <div class="container">
             <h4 class="section-subtitle text-center">Downloadable Notices</h4>
@@ -162,7 +193,7 @@
             <div class="download-item"><a href="#">Exam Schedule PDF</a></div>
             <div class="download-item"><a href="#">Registration Form PDF</a></div>
         </div>
-    </section>
+    </section> <br><br><br>
     <!-- Important Announcements -->
     <section class="important-announcements">
         <div class="container">
@@ -172,7 +203,7 @@
                 <div class="col-md-6 notice-item">📌 Library Timings Changed – 05 Oct 2025</div>
             </div>
         </div>
-    </section>
+    </section> <br><br><br>
 
     <!-- Photo / Media Gallery -->
     <section class="media-gallery" style="padding:50px 0; background:#f9f9f9;">
@@ -193,7 +224,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> <br>
 
     <!-- FAQs / Help -->
     <section class="faq" style="padding:50px 0;">
@@ -233,6 +264,8 @@
         </div>
     </section>
 
+
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -241,6 +274,7 @@
         </div>
     </footer>
 
+    <!-- Bootstrap 3 JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>

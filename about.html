@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About - Dhaka Mohila Polytechnic Institute</title>
+
+  <!-- Bootstrap 3 CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      padding-top: 50px;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #9036a7;
+      border: none;
+    }
+
+    .navbar-brand,
+    .navbar-nav>li>a {
+      color: #fff !important;
+      font-weight: 500;
+    }
+
+    .navbar-brand:hover,
+    .navbar-nav>li>a:hover {
+      color: #ffd700 !important;
+    }
+
+    .navbar-brand img {
+      border-radius: 50%;
+      border: 2px solid #fff;
+      margin-right: 8px;
+    }
+
+    /* Hero */
+    .hero {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('image/home-bg.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+      padding: 150px 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
+
+    /* Section Title */
+    .section-title {
+      text-align: center;
+      font-weight: 700;
+      color: #7e2e92;
+      margin-bottom: 40px;
+    }
+
+    /* About Section */
+    .about-section img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .info-box {
+      background: #f5f5f5;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 15px;
+      transition: 0.3s;
+    }
+
+    .info-box:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .feature-card {
+      padding: 20px;
+      border-radius: 8px;
+      background: #f9f9f9;
+      transition: 0.3s;
+      margin-bottom: 20px;
+    }
+
+    .feature-card:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    
+    .teacher-card-body {
+      padding: 15px;
+      background: #fff;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      background: #1a1a1a;
+      color: #fff;
+      text-align: center;
+      padding: 25px 0;
+    }
+
+    footer a {
+      color: #ffd700;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html" style="display:flex; align-items:center; gap:8px;">
+          <img src="image/images (1).jpeg" alt="DMPI Logo"
+            style="height:40px; width:40px; border-radius:50%; border:2px solid #fff;">
+          <span style="color:white; font-weight:600; font-size:16px;">Dhaka Mohila Polytechnic Institute</span>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">Home</a></li>
+          <li class="active"><a href="about.html">About</a></li>
+          <li><a href="department.html">Departments</a></li>
+          <li><a href="notice.html">Notice</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>About Dhaka Mohila Polytechnic Institute</h1>
+      <p>Empowering Women Through Technical and Vocational Education</p>
+      <a href="#about" class="btn btn-warning btn-lg">Explore More</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section container" style="padding:60px 0;">
+    <h2 class="section-title text-center">Our Institute</h2>
+    <div class="row">
+      <!-- Left: Image -->
+      <div class="col-md-6 col-sm-12">
+        <img src="image/pic9.jpg" alt="DMPI Campus">
+      </div>
+
+      <!-- Right: Info Boxes -->
+      <div class="col-md-6 col-sm-12">
+        <p><strong>Dhaka Mohila Polytechnic Institute (DMPI)</strong> is a premier government technical institution
+          focused on empowering women with modern technical education in engineering, technology, and applied sciences.
+        </p>
+        
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <div class="info-box">
+              <h4>Computer Science & Technology</h4>
+              <p>IT labs, coding, software development</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="info-box">
+              <h4>Electrical Engineering</h4>
+              <p>Circuits, machines, and automation technology practical training.</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="info-box">
+              <h4>Civil Engineering</h4>
+              <p>Design and construction of sustainable infrastructure projects.</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6">
+            <div class="info-box">
+              <h4>Mechanical Engineering</h4>
+              <p>Training in thermodynamics, machines, and manufacturing processes.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" class="btn btn-primary"
+          style="margin-top:20px; padding:10px 25px; font-size:16px; background-color:#1abc9c; border:none; border-radius:5px; color:white;">Learn
+          More</a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- New Extended Section (Added below Learn More) -->
+  <div class="row" style="margin-top:30px;">
+    <div class="col-xs-12 col-sm-6">
+      <div class="info-box">
+        <h4>About Our Teachers</h4>
+        <p>Experienced faculty members committed to providing quality education and mentorship.</p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+      <div class="info-box">
+        <h4>Campus Life</h4>
+        <p>Vibrant student community, clubs, events, and cultural activities.</p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+      <div class="info-box">
+        <h4>Labs & Facilities</h4>
+        <p>State-of-the-art laboratories, libraries, and technical workshops for hands-on learning.</p>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+      <div class="info-box">
+        <h4>Achievements</h4>
+        <p>Notable student projects, competitions, and awards showcasing our excellence.</p>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </section> <br><br>
+
+
+  <!-- Mission / Vision / Values -->
+  <section class="container" style="margin-top:60px; margin-bottom:60px;">
+    <div class="row text-center">
+      <div class="col-md-4 col-sm-12">
+        <div class="feature-card">
+          <h3>Mission</h3>
+          <p>Empower women with technical knowledge, practical skills, and confidence to succeed in professional
+            careers.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <div class="feature-card">
+          <h3>Vision</h3>
+          <p>To be a leading institute fostering innovation, research, and excellence in technical education for women.
+          </p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <div class="feature-card">
+          <h3>Values</h3>
+          <p>Integrity, Excellence, Collaboration, Inclusivity, and Lifelong Learning. For brighting better future</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© 2025 Dhaka Mohila Polytechnic Institute. All Rights Reserved.</p>
+      <p>Designed & Developed by <a href="#">Sumaiya Jannat</a></p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 3 JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
