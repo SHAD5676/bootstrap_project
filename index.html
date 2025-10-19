@@ -25,6 +25,12 @@
       border: none;
     }
 
+    .navbar-nav>li>a:hover {
+      background-color: #7e2e92 !important;
+      border-radius: 4px;
+    }
+
+
     .navbar-brand,
     .navbar-nav>li>a {
       color: #fff !important;
@@ -52,6 +58,22 @@
       text-align: center;
       padding: 200px 20px;
     }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 120px 20px;
+        background-position-y: center;
+      }
+
+      .hero h1 {
+        font-size: 24px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+    }
+
 
 
     /* Section Title */
@@ -85,6 +107,23 @@
       border-radius: 8px;
     }
 
+    .dept-card {
+      animation: fadeInUp 0.8s ease-in-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
     /* Notice Section */
     .notice {
       background: #f9f9f9;
@@ -94,10 +133,9 @@
     .notice-item {
       background: #fff;
       border-left: 5px solid #7e2e92;
-      padding: 15px;
-      margin-bottom: 10px;
-      transition: 0.3s;
+      border-radius: 4px;
     }
+
 
     .notice-item:hover {
       background: #eaeaea;
@@ -163,7 +201,13 @@
       <h1>Dhaka Mohila Polytechnic Institute</h1>
       <p>Empowering Women Through Technical and Vocational Education</p>
       <a href="#about" class="btn btn-warning btn-lg">Explore More</a>
+
+
+
     </div>
+
+
+
   </section>
 
   <!-- About Section -->
@@ -200,101 +244,116 @@
   </section>
 
   <!-- Carousel Section -->
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
 
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="image/Picture7.jpg" alt="Campus 1" style="width:100%; height:500px; object-fit:cover;">
-        <div class="carousel-caption">
-          <h3>Welcome to Dhaka Mohila Polytechnic Institute</h3>
-          <p>Empowering Women Through Technical Education</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="image/slider2.jpg" alt="Campus 2" style="width:100%; height:500px; object-fit:cover;">
-        <div class="carousel-caption">
-          <h3>Modern Campus Facilities</h3>
-          <p>Ensuring Quality and Safety</p>
-        </div>
-      </div>
-
-      <div class="item">
-        <img src="image/slider3.jpg" alt="Campus 3" style="width:100%; height:500px; object-fit:cover;">
-        <div class="carousel-caption">
-          <h3>Join Our Engineering Programs</h3>
-          <p>Building a Skilled Female Workforce</p>
-        </div>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="image/Picture7.jpg" alt="Campus 1" style="width:100%; height:500px; object-fit:cover;">
+      <div class="carousel-caption">
+        <h3>Welcome to Dhaka Mohila Polytechnic Institute</h3>
+        <p>Empowering Women Through Technical Education</p>
       </div>
     </div>
 
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    <div class="item">
+      <img src="image/slider2.jpg" alt="Campus 2" style="width:100%; height:500px; object-fit:cover;">
+      <div class="carousel-caption">
+        <h3>Modern Campus Facilities</h3>
+        <p>Ensuring Quality and Safety</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="image/slider3.jpg" alt="Campus 3" style="width:100%; height:500px; object-fit:cover;">
+      <div class="carousel-caption">
+        <h3>Join Our Engineering Programs</h3>
+        <p>Building a Skilled Female Workforce</p>
+      </div>
+    </div>
   </div>
 
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
+<!-- Campus Life Section (Carousel থেকে নিচে gap ঠিক করা) -->
+<section class="py-5" style="background:#fff9ff; margin-top:60px;">
+  <div class="container text-center">
+    <h2 class="section-title">Campus Life at DMPI</h2>
 
+    <!-- Horizontal Paragraph -->
+    <p style="font-size:16px; line-height:1.8; text-align:center; max-width:900px; margin:20px auto;">
+      The campus of <strong>Dhaka Mohila Polytechnic Institute</strong> is a vibrant and inspiring place for students. 
+      Surrounded by greenery and a peaceful environment, it offers the perfect setting for learning and creativity. 
+      The institute has well-equipped classrooms, modern laboratories, a digital library, and Wi-Fi connectivity 
+      across the campus. Students enjoy various extracurricular activities such as cultural programs, sports 
+      competitions, and technical festivals that help them grow in both academic and personal areas. 
+      The friendly atmosphere and dedicated teachers make the campus a second home for every student.
+    </p>
 
-  <!-- Departments Section -->
-  <section id="departments" style="background:#f5f5f5; padding:60px 0;">
-    <div class="container">
-      <h2 class="section-title">Our Departments</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="dept-card">
-            <img src="image/download (5).jpeg" alt="CST">
-            <h4>Computer Science & Technology</h4>
-          </div>
+    <!-- Campus Images -->
+    <div class="row" style="margin-top:30px;">
+      <div class="col-md-4 col-sm-6">
+        <div class="dept-card">
+          <img src="image/slider00.jpg" alt="Campus Area">
+          <h5 style="color:#9036a7; margin-top:10px;">Green & Peaceful Campus</h5>
         </div>
-        <div class="col-md-4">
-          <div class="dept-card">
-            <img src="image/download.jpeg" alt="EEE">
-            <h4>Electrical Engineering</h4>
-          </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="dept-card">
+          <img src="image/slider9.jpeg" alt="Classroom">
+          <h5 style="color:#9036a7; margin-top:10px;">Modern Classrooms</h5>
         </div>
-        <div class="col-md-4">
-          <div class="dept-card">
-            <img src="image/download (2).jpeg" alt="EEE">
-            <h4>Electromedical Engineering</h4>
-          </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="dept-card">
+          <img src="image/slider7.jpeg" alt="Library">
+          <h5 style="color:#9036a7; margin-top:10px;">Digital Library</h5>
         </div>
-        <div class="col-md-4">
-          <div class="dept-card">
-            <img src="image/download (8).jpeg" alt="Civil">
-            <h4>Civil Engineering</h4>
-          </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="dept-card">
+          <img src="image/home-bg2.jpg" alt="Cultural Event">
+          <h5 style="color:#9036a7; margin-top:10px;">Cultural Activities</h5>
         </div>
-        <div class="col-md-4">
-          <div class="dept-card">
-            <img src="image/images (13).jpeg" alt="Mecanical">
-            <h4>Mechanical Engineering</h4>
-          </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="dept-card">
+          <img src="image/slider8.jpeg" alt="Sports">
+          <h5 style="color:#9036a7; margin-top:10px;">Sports & Games</h5>
         </div>
-        <div class="col-md-4">
-          <div class="dept-card">
-            <img src="image/download (3).jpeg" alt="Architecture">
-            <h4>Architecture & Interior Design</h4>
-          </div>
+      </div>
+
+      <div class="col-md-4 col-sm-6">
+        <div class="dept-card">
+          <img src="image/hqdefault.jpg" alt="Labs">
+          <h5 style="color:#9036a7; margin-top:10px;">Modern Laboratories</h5>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+
 
   <!-- Notice Section -->
   <section id="notices" class="notice">
@@ -318,6 +377,9 @@
     <iframe src="https://www.google.com/maps?q=dhaka+mohila+polytechnic+institute&output=embed" width="100%"
       height="300" frameborder="0"></iframe>
   </section>
+
+  <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
 
   <!-- Footer -->
   <footer>
