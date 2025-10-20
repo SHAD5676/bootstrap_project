@@ -39,7 +39,7 @@
 
     .navbar-brand:hover,
     .navbar-nav>li>a:hover {
-      color: #ffd700 !important;
+      color: #051add !important;
     }
 
     .navbar-brand img {
@@ -152,6 +152,65 @@
     footer a {
       color: #ffd700;
     }
+
+    /* Force nav link color to white and remove Bootstrap background overrides */
+    .navbar-nav li a {
+      position: relative;
+      color: #ffffff !important;
+      /* always white */
+      text-decoration: none;
+      background: none !important;
+      transition: color 0.2s ease;
+    }
+
+    /* Keep color white on hover / focus / active and remove default BG */
+    .navbar-nav li a:hover,
+    .navbar-nav li a:focus,
+    .navbar-nav li.active>a {
+      color: #ffffff !important;
+      /* keep white on hover/focus/active */
+      background: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+
+    /* Underline effect (uses currentColor, so it will be white) */
+    .navbar-nav li a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      /* 2px below text */
+      width: 0;
+      height: 2px;
+      background-color: currentColor;
+      transition: width 0.25s ease;
+    }
+
+    /* Show underline on hover and for the active item */
+    .navbar-nav li a:hover::after,
+    .navbar-nav li.active>a::after {
+      width: 100%;
+    }
+
+    .notice-box {
+      background: #f8f8f8;
+      /* light background */
+      border: 1px solid #ddd;
+      /* subtle border */
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 20px;
+      min-height: 120px;
+      transition: all 0.3s ease;
+    }
+
+    /* Hover effect */
+    .notice-box:hover {
+      background: #ffffff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transform: translateY(-3px);
+    }
   </style>
 </head>
 
@@ -159,7 +218,7 @@
 
   <!-- Navbar -->
   <!-- Navbar -->
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-fixed-top" style="padding-top: 10px; padding-bottom: 10px;">
     <div class="container">
 
       <!-- Brand and toggle -->
@@ -171,7 +230,7 @@
         </button>
 
 
-        <!-- ✅ Fixed brand alignment -->
+        <!-- Fixed brand alignment -->
         <a class="navbar-brand" href="#" style="display:flex; align-items:center; gap:8px;">
           <img src="image/images (1).jpeg" alt="DMPI Logo"
             style="height:40px; width:40px; border-radius:50%; border:2px solid #fff;">
@@ -244,129 +303,146 @@
   </section>
 
   <!-- Carousel Section -->
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <img src="image/Picture7.jpg" alt="Campus 1" style="width:100%; height:500px; object-fit:cover;">
-      <div class="carousel-caption">
-        <h3>Welcome to Dhaka Mohila Polytechnic Institute</h3>
-        <p>Empowering Women Through Technical Education</p>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="image/Picture7.jpg" alt="Campus 1" style="width:100%; height:500px; object-fit:cover;">
+        <div class="carousel-caption">
+          <h3>Welcome to Dhaka Mohila Polytechnic Institute</h3>
+          <p>Empowering Women Through Technical Education</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="image/slider2.jpg" alt="Campus 2" style="width:100%; height:500px; object-fit:cover;">
+        <div class="carousel-caption">
+          <h3>Modern Campus Facilities</h3>
+          <p>Ensuring Quality and Safety</p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="image/slider3.jpg" alt="Campus 3" style="width:100%; height:500px; object-fit:cover;">
+        <div class="carousel-caption">
+          <h3>Join Our Engineering Programs</h3>
+          <p>Building a Skilled Female Workforce</p>
+        </div>
       </div>
     </div>
 
-    <div class="item">
-      <img src="image/slider2.jpg" alt="Campus 2" style="width:100%; height:500px; object-fit:cover;">
-      <div class="carousel-caption">
-        <h3>Modern Campus Facilities</h3>
-        <p>Ensuring Quality and Safety</p>
-      </div>
-    </div>
-
-    <div class="item">
-      <img src="image/slider3.jpg" alt="Campus 3" style="width:100%; height:500px; object-fit:cover;">
-      <div class="carousel-caption">
-        <h3>Join Our Engineering Programs</h3>
-        <p>Building a Skilled Female Workforce</p>
-      </div>
-    </div>
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
 
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+  <!-- Campus Life Section (Carousel থেকে নিচে gap ঠিক করা) -->
+  <section class="py-5" style="background:#fff9ff; margin-top:60px;">
+    <div class="container text-center">
+      <h2 class="section-title">Campus Life at DMPI</h2>
 
-<!-- Campus Life Section (Carousel থেকে নিচে gap ঠিক করা) -->
-<section class="py-5" style="background:#fff9ff; margin-top:60px;">
-  <div class="container text-center">
-    <h2 class="section-title">Campus Life at DMPI</h2>
+      <!-- Horizontal Paragraph -->
+      <p style="font-size:16px; line-height:1.8; text-align:center; max-width:900px; margin:20px auto;">
+        The campus of <strong>Dhaka Mohila Polytechnic Institute</strong> is a vibrant and inspiring place for students.
+        Surrounded by greenery and a peaceful environment, it offers the perfect setting for learning and creativity.
+        The institute has well-equipped classrooms, modern laboratories, a digital library, and Wi-Fi connectivity
+        across the campus. Students enjoy various extracurricular activities such as cultural programs, sports
+        competitions, and technical festivals that help them grow in both academic and personal areas.
+        The friendly atmosphere and dedicated teachers make the campus a second home for every student.
+      </p>
 
-    <!-- Horizontal Paragraph -->
-    <p style="font-size:16px; line-height:1.8; text-align:center; max-width:900px; margin:20px auto;">
-      The campus of <strong>Dhaka Mohila Polytechnic Institute</strong> is a vibrant and inspiring place for students. 
-      Surrounded by greenery and a peaceful environment, it offers the perfect setting for learning and creativity. 
-      The institute has well-equipped classrooms, modern laboratories, a digital library, and Wi-Fi connectivity 
-      across the campus. Students enjoy various extracurricular activities such as cultural programs, sports 
-      competitions, and technical festivals that help them grow in both academic and personal areas. 
-      The friendly atmosphere and dedicated teachers make the campus a second home for every student.
-    </p>
-
-    <!-- Campus Images -->
-    <div class="row" style="margin-top:30px;">
-      <div class="col-md-4 col-sm-6">
-        <div class="dept-card">
-          <img src="image/slider00.jpg" alt="Campus Area">
-          <h5 style="color:#9036a7; margin-top:10px;">Green & Peaceful Campus</h5>
+      <!-- Campus Images -->
+      <div class="row" style="margin-top:30px;">
+        <div class="col-md-4 col-sm-6">
+          <div class="dept-card">
+            <img src="image/slider00.jpg" alt="Campus Area">
+            <h5 style="color:#9036a7; margin-top:10px;">Green & Peaceful Campus</h5>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-4 col-sm-6">
-        <div class="dept-card">
-          <img src="image/slider9.jpeg" alt="Classroom">
-          <h5 style="color:#9036a7; margin-top:10px;">Modern Classrooms</h5>
+        <div class="col-md-4 col-sm-6">
+          <div class="dept-card">
+            <img src="image/slider9.jpeg" alt="Classroom">
+            <h5 style="color:#9036a7; margin-top:10px;">Modern Classrooms</h5>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-4 col-sm-6">
-        <div class="dept-card">
-          <img src="image/slider7.jpeg" alt="Library">
-          <h5 style="color:#9036a7; margin-top:10px;">Digital Library</h5>
+        <div class="col-md-4 col-sm-6">
+          <div class="dept-card">
+            <img src="image/slider7.jpeg" alt="Library">
+            <h5 style="color:#9036a7; margin-top:10px;">Digital Library</h5>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-4 col-sm-6">
-        <div class="dept-card">
-          <img src="image/home-bg2.jpg" alt="Cultural Event">
-          <h5 style="color:#9036a7; margin-top:10px;">Cultural Activities</h5>
+        <div class="col-md-4 col-sm-6">
+          <div class="dept-card">
+            <img src="image/home-bg2.jpg" alt="Cultural Event">
+            <h5 style="color:#9036a7; margin-top:10px;">Cultural Activities</h5>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-4 col-sm-6">
-        <div class="dept-card">
-          <img src="image/slider8.jpeg" alt="Sports">
-          <h5 style="color:#9036a7; margin-top:10px;">Sports & Games</h5>
+        <div class="col-md-4 col-sm-6">
+          <div class="dept-card">
+            <img src="image/slider8.jpeg" alt="Sports">
+            <h5 style="color:#9036a7; margin-top:10px;">Sports & Games</h5>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-4 col-sm-6">
-        <div class="dept-card">
-          <img src="image/hqdefault.jpg" alt="Labs">
-          <h5 style="color:#9036a7; margin-top:10px;">Modern Laboratories</h5>
+        <div class="col-md-4 col-sm-6">
+          <div class="dept-card">
+            <img src="image/hqdefault.jpg" alt="Labs">
+            <h5 style="color:#9036a7; margin-top:10px;">Modern Laboratories</h5>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
   <!-- Notice Section -->
   <section id="notices" class="notice">
     <div class="container">
-      <h2 class="section-title">Notice Board</h2>
-      <div class="notice-item">📢 Admission Circular 2025 is now available.</div>
-      <div class="notice-item">📅 Semester Final Exam starts on 10 November 2025.</div>
-      <div class="notice-item">📄 Student Registration for new session is ongoing.</div>
+      <h2 class="section-title text-center">Notice Board</h2>
+
+      <div class="row text-center">
+        <div class="col-sm-4">
+          <div class="notice-box">
+            📢 Admission Circular 2025 is now available.
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="notice-box">
+            📅 Semester Final Exam starts on 10 November 2025.
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="notice-box">
+            📄 Student Registration for new session is ongoing.
+          </div>
+        </div>
+      </div>
+
       <div class="text-center" style="margin-top:20px;">
         <a href="#" class="btn btn-primary">View All Notices</a>
       </div>
     </div>
   </section>
+
 
   <!-- Contact Section -->
   <section id="contact" class="container text-center" style="padding:60px 0;">

@@ -114,14 +114,53 @@
         footer a {
             color: #ffd700;
         }
+
+        /* Force nav link color to white and remove Bootstrap background overrides */
+        .navbar-nav li a {
+            position: relative;
+            color: #ffffff !important;
+            /* always white */
+            text-decoration: none;
+            background: none !important;
+            transition: color 0.2s ease;
+        }
+
+        /* Keep color white on hover / focus / active and remove default BG */
+        .navbar-nav li a:hover,
+        .navbar-nav li a:focus,
+        .navbar-nav li.active>a {
+            color: #ffffff !important;
+            /* keep white on hover/focus/active */
+            background: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        /* Underline effect (uses currentColor, so it will be white) */
+        .navbar-nav li a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            /* 2px below text */
+            width: 0;
+            height: 2px;
+            background-color: currentColor;
+            transition: width 0.25s ease;
+        }
+
+        /* Show underline on hover and for the active item */
+        .navbar-nav li a:hover::after,
+        .navbar-nav li.active>a::after {
+            width: 100%;
+        }
     </style>
 </head>
 
 <body>
 
     <!-- Navbar -->
-    <!-- Navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top" style="padding-top: 10px; padding-bottom: 10px;">
         <div class="container">
 
             <!-- Brand and toggle -->
@@ -145,10 +184,10 @@
             <!-- Navbar Menu -->
             <div class="collapse navbar-collapse" id="mainNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="department.html">Departments</a></li>
-                    <li><a href="notice.html">Notice</a></li>
+                    <li class="active"><a href="notice.html">Notice</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
 
