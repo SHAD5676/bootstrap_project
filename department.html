@@ -21,7 +21,7 @@
 
     /* Navbar */
     .navbar {
-      background-color: #9036a7;
+      background-color: #9112BC;
       border: none;
     }
 
@@ -58,7 +58,7 @@
     .section-title {
       text-align: center;
       font-weight: 700;
-      color: #7e2e92;
+      color: #9112BC;
       margin-bottom: 40px;
     }
 
@@ -93,7 +93,7 @@
 
     .notice-item {
       background: #fff;
-      border-left: 5px solid #7e2e92;
+      border-left: 5px solid #9112BC;
       padding: 15px;
       margin-bottom: 10px;
       transition: 0.3s;
@@ -112,8 +112,49 @@
     }
 
     footer a {
-      color: #ffd700;
+      color: #FFFCB8;
     }
+
+        /* Force nav link color to white and remove Bootstrap background overrides */
+    .navbar-nav li a {
+      position: relative;
+      color: #ffffff !important;
+      /* always white */
+      text-decoration: none;
+      background: none !important;
+      transition: color 0.2s ease;
+    }
+
+    /* Keep color white on hover / focus / active and remove default BG */
+    .navbar-nav li a:hover,
+    .navbar-nav li a:focus,
+    .navbar-nav li.active>a {
+      color: #ffffff !important;
+      /* keep white on hover/focus/active */
+      background: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+    }
+
+    /* Underline effect (uses currentColor, so it will be white) */
+    .navbar-nav li a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      /* 2px below text */
+      width: 0;
+      height: 2px;
+      background-color: currentColor;
+      transition: width 0.25s ease;
+    }
+
+    /* Show underline on hover and for the active item */
+    .navbar-nav li a:hover::after,
+    .navbar-nav li.active>a::after {
+      width: 100%;
+    }
+
   </style>
 </head>
 
@@ -121,7 +162,7 @@
 
   <!-- Navbar -->
   <!-- Navbar -->
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default navbar-fixed-top" style="padding-top: 10px; padding-bottom: 10px;">
     <div class="container">
 
       <!-- Brand and toggle -->
@@ -133,7 +174,7 @@
         </button>
 
 
-        <!-- ✅ Fixed brand alignment -->
+        <!-- Fixed brand alignment -->
         <a class="navbar-brand" href="#" style="display:flex; align-items:center; gap:8px;">
           <img src="image/images (1).jpeg" alt="DMPI Logo"
             style="height:40px; width:40px; border-radius:50%; border:2px solid #fff;">
@@ -144,9 +185,9 @@
       <!-- Navbar Menu -->
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="department.html">Departments</a></li>
+          <li  class="active" ><a href="department.html">Departments</a></li>
           <li><a href="notice.html">Notice</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -162,154 +203,198 @@
     <div class="container">
       <h1>Dhaka Mohila Polytechnic Institute</h1>
       <p>Empowering Women Through Technical and Vocational Education</p>
-      <a href="#about" class="btn btn-warning btn-lg">Explore More</a>
+      <button class="btn btn-primary">Click Here</button>
+
     </div>
   </section>
 
   <!-- Departments Section -->
-  <section id="departments" class="py-5" style="background:#f5f5f5;">
+  <section id="departments" style="background:#f5f5f5; padding:60px 0;">
     <div class="container">
       <h2 class="section-title">Our Departments</h2>
-      <div class="row g-4">
-
-        <div class="col-md-4">
-          <div class="dept-card">
-            <img src="image/slider00.jpg" alt="CST">
-            <div class="p-3">
-              <h5 style="color:#9036a7;">Computer Science & Technology</h5>
-              <p>Programming, networking, and IT skills.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="dept-card">
-            <img src="image/slider9.jpeg" alt="EEE">
-            <div class="p-3">
-              <h5 style="color:#9036a7;">Electrical Engineering</h5>
-              <p>Focus on circuits, power systems, and automation.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="dept-card">
-            <img src="image/slider7.jpeg" alt="Civil">
-            <div class="p-3">
-              <h5 style="color:#9036a7;">Civil Engineering</h5>
-              <p>Design and construct sustainable infrastructure.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="dept-card">
-            <img src="image/home-bg2.jpg" alt="Architecture">
-            <div class="p-3">
-              <h5 style="color:#9036a7;">Architecture & Interior Design</h5>
-              <p>Creative and sustainable building design.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="dept-card">
-            <img src="image/slider8.jpeg" alt="Mechanical">
-            <div class="p-3">
-              <h5 style="color:#9036a7;">Mechanical Engineering</h5>
-              <p>Thermodynamics, manufacturing and automation.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="dept-card">
-            <img src="image/hqdefault.jpg" alt="Electromedical">
-            <div class="p-3">
-              <h5 style="color:#9036a7;">Electromedical Engineering</h5>
-              <p>Electronics and medical technology applications.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Department Overview -->
-  <section class="py-5 bg-white">
-    <div class="container text-center">
-      <h2 class="section-title">Why Choose Our Departments?</h2>
-      <p class="mx-auto" style="max-width:800px;">Our institute provides practical and innovative education across all departments.
-        Students work in modern labs, learn from experienced teachers, and engage in real-world projects to become
-        confident professionals.</p>
-    </div>
-  </section>
-
-  <!-- Facilities -->
-  <section class="py-5 bg-light">
-    <div class="container text-center">
-      <h2 class="section-title">Facilities & Labs</h2>
       <div class="row">
         <div class="col-md-4">
-          <h4>💻 Modern Computer Labs</h4>
-          <p>Equipped with high-end PCs for software, networking, and hardware learning.</p>
+          <div class="dept-card">
+            <img src="image/download (5).jpeg" alt="CST">
+            <h4>Computer Science & Technology</h4>
+          </div>
         </div>
         <div class="col-md-4">
-          <h4>⚙️ Technical Workshops</h4>
-          <p>Hands-on mechanical and electrical training sessions in real lab environments.</p>
+          <div class="dept-card">
+            <img src="image/download.jpeg" alt="EEE">
+            <h4>Electrical Engineering</h4>
+          </div>
         </div>
         <div class="col-md-4">
-          <h4>🎓 Expert Faculty</h4>
-          <p>Highly experienced teachers guiding students through each step of learning.</p>
+          <div class="dept-card">
+            <img src="image/download (2).jpeg" alt="EEE">
+            <h4>Electromedical Engineering</h4>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="dept-card">
+            <img src="image/download (8).jpeg" alt="Civil">
+            <h4>Civil Engineering</h4>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="dept-card">
+            <img src="image/images (13).jpeg" alt="Mecanical">
+            <h4>Mechanical Engineering</h4>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="dept-card">
+            <img src="image/download (3).jpeg" alt="Architecture">
+            <h4>Architecture & Interior Design</h4>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Career Opportunities -->
-  <section class="py-5 bg-white">
-    <div class="container text-center">
-      <h2 class="section-title">Career Opportunities</h2>
-      <ul class="list-unstyled mx-auto" style="max-width:800px; font-size:15px;">
-        <li>💻 Software Developer, IT Specialist (CST)</li>
-        <li>⚡ Power Engineer, Electrical Technician (EEE)</li>
-        <li>🏗️ Construction Supervisor, Surveyor (Civil)</li>
-        <li>🛠️ Design Engineer, Machine Operator (Mechanical)</li>
-        <li>🩺 Biomedical Technician (Electromedical)</li>
+<!-- Department Overview -->
+<section class="department-overview" style="padding:120px 0; background:#ffffff;">
+  <div class="container text-center">
+    <h2 class="section-title" style="
+        font-size:36px; 
+        font-weight:700; 
+        color:#9112BC; 
+        margin-bottom:20px; 
+        position:relative;
+        display:inline-block;
+    ">
+      Why Choose Our Departments?
+    </h2>
+    <div style="width:60px; height:4px; background:#9112BC; margin:10px auto 40px;"></div>
+    <p style="max-width:800px; margin:0 auto; line-height:1.8; font-size:17px; color:#555; text-align:center;">
+      Our institute provides practical and innovative education across all departments.
+      Students work in modern labs, learn from experienced teachers, and engage in real-world projects to become confident professionals.
+    </p>
+  </div>
+</section>
+
+<!-- Facilities -->
+<section class="facilities" style="padding:120px 0; background:#f8f9fa;">
+  <div class="container text-center">
+    <h2 class="section-title" style="
+        font-size:36px; 
+        font-weight:700; 
+        color:#9112BC; 
+        margin-bottom:20px;
+        position:relative;
+        display:inline-block;
+    ">
+      Facilities & Labs
+    </h2>
+    <div style="width:60px; height:4px; background:#9112BC; margin:10px auto 50px;"></div>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div style="background:#fff; padding:30px 20px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:transform 0.3s;">
+          <h4>💻 Modern Computer Labs</h4>
+          <p style="text-align:center;">Equipped with high-end PCs for software, networking, and hardware learning.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div style="background:#fff; padding:30px 20px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:transform 0.3s;">
+          <h4>⚙️ Technical Workshops</h4>
+          <p style="text-align:center;">Hands-on mechanical and electrical training sessions in real lab environments.</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div style="background:#fff; padding:30px 20px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:transform 0.3s;">
+          <h4>🎓 Expert Faculty</h4>
+          <p style="text-align:center;">Highly experienced teachers guiding students through each step of learning.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Career Opportunities -->
+<section class="career-opportunities" style="padding:120px 0; background:#ffffff;">
+  <div class="container text-center">
+    <h2 class="section-title" style="
+        font-size:36px; 
+        font-weight:700; 
+        color:#9112BC; 
+        margin-bottom:20px;
+        position:relative;
+        display:inline-block;
+    ">
+      Career Opportunities
+    </h2>
+    <div style="width:60px; height:4px; background:#9112BC; margin:10px auto 40px;"></div>
+    <div style="max-width:800px; margin:0 auto; background:#f8f9fa; padding:40px; border-radius:15px; box-shadow:0 5px 20px rgba(0,0,0,0.1);">
+      <ul style="list-style:none; margin:0; padding:0; font-size:17px; line-height:2;">
+        <li><span style="font-weight:bold;">💻 CST:</span> Software Developer, IT Specialist</li>
+        <li><span style="font-weight:bold;">⚡ EEE:</span> Power Engineer, Electrical Technician</li>
+        <li><span style="font-weight:bold;">🏗️ Civil Engineering:</span> Construction Supervisor, Surveyor</li>
+        <li><span style="font-weight:bold;">🛠️ Mechanical Engineering:</span> Design Engineer, Machine Operator</li>
+        <li><span style="font-weight:bold;">🩺 Electromedical Engineering:</span> Biomedical Technician</li>
       </ul>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Achievements -->
-  <section class="py-5" style="background:#fff3fc;">
-    <div class="container text-center">
-      <h2 class="section-title">Department Achievements</h2>
-      <div class="row">
-        <div class="col-md-4">
+<!-- Achievements -->
+<section class="achievements" style="padding:120px 0; background:#fff3fc;">
+  <div class="container text-center">
+    <h2 class="section-title" style="
+        font-size:36px; 
+        font-weight:700; 
+        color:#9112BC; 
+        margin-bottom:20px;
+        position:relative;
+        display:inline-block;
+    ">
+      Department Achievements
+    </h2>
+    <div style="width:60px; height:4px; background:#9112BC; margin:10px auto 50px;"></div>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div style="background:#fff; padding:30px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:transform 0.3s;">
           <h4>🏆 Best Polytechnic Award</h4>
-          <p>Recognized nationally for women's technical excellence.</p>
+          <p style="text-align:center;">Recognized nationally for women's technical excellence.</p>
         </div>
-        <div class="col-md-4">
+      </div>
+      <div class="col-md-4 mb-4">
+        <div style="background:#fff; padding:30px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:transform 0.3s;">
           <h4>💻 Coding Championship</h4>
-          <p>Our students have achieved top ranks in national competitions.</p>
+          <p style="text-align:center;">Our students have achieved top ranks in national competitions.</p>
         </div>
-        <div class="col-md-4">
+      </div>
+      <div class="col-md-4 mb-4">
+        <div style="background:#fff; padding:30px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.1); transition:transform 0.3s;">
           <h4>🔬 Innovative Projects</h4>
-          <p>Creative and impactful final-year projects recognized by BTEB.</p>
+          <p style="text-align:center;">Creative and impactful final-year projects recognized by BTEB.</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Admission -->
-  <section class="py-5 bg-light text-center">
-    <div class="container">
-      <h2 class="section-title">Admission & Course Duration</h2>
-      <p>All departments offer a 4-year Diploma program under Bangladesh Technical Education Board (BTEB).</p>
-      <a href="admission.html" class="btn btn-warning">View Admission Details</a>
-    </div>
-  </section> <br><br>
+<!-- Admission -->
+<section class="admission" style="padding:120px 0; background:#f8f9fa; text-align:center;">
+  <div class="container">
+    <h2 class="section-title" style="
+        font-size:36px; 
+        font-weight:700; 
+        color:#9112BC; 
+        margin-bottom:20px;
+        position:relative;
+        display:inline-block;
+    ">
+      Admission & Course Duration
+    </h2>
+    <div style="width:60px; height:4px; background:#9112BC; margin:10px auto 40px;"></div>
+    <p style="max-width:800px; margin:0 auto 30px; font-size:17px; line-height:1.8; color:#555; text-align:center;">
+      All departments offer a 4-year Diploma program under Bangladesh Technical Education Board (BTEB).
+    </p>
+    <a href="admission.html" class="btn btn-warning btn-lg" style="padding:12px 35px; font-size:18px;">View Admission Details</a>
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer>
@@ -325,5 +410,3 @@
 </body>
 
 </html>
-
-  

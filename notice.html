@@ -21,7 +21,7 @@
 
         /* Navbar */
         .navbar {
-            background-color: #9036a7;
+            background-color: #9112BC;
             border: none;
         }
 
@@ -33,7 +33,7 @@
 
         .navbar-brand:hover,
         .navbar-nav>li>a:hover {
-            color: #ffd700 !important;
+            color: #FFFCB8 !important;
         }
 
         .navbar-brand img {
@@ -58,7 +58,7 @@
         .section-title {
             text-align: center;
             font-weight: 700;
-            color: #7e2e92;
+            color: #9112BC;
             margin-bottom: 40px;
         }
 
@@ -93,7 +93,7 @@
 
         .notice-item {
             background: #fff;
-            border-left: 5px solid #7e2e92;
+            border-left: 5px solid #9112BC;
             padding: 15px;
             margin-bottom: 10px;
             transition: 0.3s;
@@ -112,7 +112,47 @@
         }
 
         footer a {
-            color: #ffd700;
+            color: #FFFCB8;
+        }
+
+        /* Force nav link color to white and remove Bootstrap background overrides */
+        .navbar-nav li a {
+            position: relative;
+            color: #ffffff !important;
+            /* always white */
+            text-decoration: none;
+            background: none !important;
+            transition: color 0.2s ease;
+        }
+
+        /* Keep color white on hover / focus / active and remove default BG */
+        .navbar-nav li a:hover,
+        .navbar-nav li a:focus,
+        .navbar-nav li.active>a {
+            color: #ffffff !important;
+            /* keep white on hover/focus/active */
+            background: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        /* Underline effect (uses currentColor, so it will be white) */
+        .navbar-nav li a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            /* 2px below text */
+            width: 0;
+            height: 2px;
+            background-color: currentColor;
+            transition: width 0.25s ease;
+        }
+
+        /* Show underline on hover and for the active item */
+        .navbar-nav li a:hover::after,
+        .navbar-nav li.active>a::after {
+            width: 100%;
         }
     </style>
 </head>
@@ -120,8 +160,7 @@
 <body>
 
     <!-- Navbar -->
-    <!-- Navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top" style="padding-top: 10px; padding-bottom: 10px;">
         <div class="container">
 
             <!-- Brand and toggle -->
@@ -133,7 +172,7 @@
                 </button>
 
 
-                <!-- ✅ Fixed brand alignment -->
+                <!-- Fixed brand alignment -->
                 <a class="navbar-brand" href="#" style="display:flex; align-items:center; gap:8px;">
                     <img src="image/images (1).jpeg" alt="DMPI Logo"
                         style="height:40px; width:40px; border-radius:50%; border:2px solid #fff;">
@@ -145,10 +184,10 @@
             <!-- Navbar Menu -->
             <div class="collapse navbar-collapse" id="mainNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="department.html">Departments</a></li>
-                    <li><a href="notice.html">Notice</a></li>
+                    <li class="active"><a href="notice.html">Notice</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
 
@@ -157,112 +196,233 @@
         </div>
     </nav>
 
-    <!-- Latest Notices -->
-    <section class="py-5">
-        <div class="container">
-            <h2 class="section-title">Latest Notices</h2>
-            <div class="notice-item"><span class="notice-date">📢 01 Oct 2025</span> Admission Circular 2025 is now
-                available.</div>
-            <div class="notice-item"><span class="notice-date">📅 10 Nov 2025</span> Semester Final Exam starts.</div>
-            <div class="notice-item"><span class="notice-date">📄 20 Oct 2025</span> Student Registration ongoing.</div>
-            <div class="notice-item"><span class="notice-date">💻 25 Oct 2025</span> Coding Competition (CST
-                Department).</div> <br>
-            <div class="text-center btn-view-all">
-                <a href="#" class="btn btn-primary btn-lg">View All Notices</a>
-            </div>
-        </div>
-    </section> <br><br><br>
+ <!-- Latest Notices -->
+<section class="py-5 bg-white" style="padding-top:80px;"> <!-- add extra top padding -->
+  <div class="container">
+    <h2 class="section-title text-center" style="margin-top:40px;">Latest Notices</h2>
+    
+    <div class="notice-item" style="margin-bottom:15px; padding:15px; background:#f8f9fa; border-left:5px solid #9112BC; border-radius:6px;">
+      <span class="notice-date" style="font-weight:bold; margin-right:10px;">📢 01 Oct 2025</span>
+      Admission Circular 2025 is now available.
+    </div>
 
-    <!-- Upcoming Events -->
-    <section class="events">
-        <div class="container">
-            <h4 class="section-subtitle text-center">Upcoming Events</h4> <br>
-            <div class="row">
-                <div class="col-md-4 event-item">🛠️ Workshop on Electrical Safety – 15 Oct 2025</div>
-                <div class="col-md-4 event-item">🎓 Graduation Ceremony – 30 Nov 2025</div>
-                <div class="col-md-4 event-item">💻 National Coding Challenge – 25 Oct 2025</div>
-            </div>
-        </div>
-    </section> <br><br>
+    <div class="notice-item" style="margin-bottom:15px; padding:15px; background:#f8f9fa; border-left:5px solid #9112BC; border-radius:6px;">
+      <span class="notice-date" style="font-weight:bold; margin-right:10px;">📅 10 Nov 2025</span>
+      Semester Final Exam starts.
+    </div>
 
-    <!-- Downloadable Notices --> <br><br>
-    <section class="downloads">
-        <div class="container">
-            <h4 class="section-subtitle text-center">Downloadable Notices</h4>
-            <div class="download-item"><a href="#">Admission Circular PDF</a></div>
-            <div class="download-item"><a href="#">Exam Schedule PDF</a></div>
-            <div class="download-item"><a href="#">Registration Form PDF</a></div>
-        </div>
-    </section> <br><br><br>
-    <!-- Important Announcements -->
-    <section class="important-announcements">
-        <div class="container">
-            <h4 class="section-subtitle text-center">Important Announcements</h4>
-            <div class="row">
-                <div class="col-md-6 notice-item">⚠️ COVID-19 Safety Guidelines Updated – 01 Oct 2025</div>
-                <div class="col-md-6 notice-item">📌 Library Timings Changed – 05 Oct 2025</div>
-            </div>
-        </div>
-    </section> <br><br><br>
+    <div class="notice-item" style="margin-bottom:15px; padding:15px; background:#f8f9fa; border-left:5px solid #9112BC; border-radius:6px;">
+      <span class="notice-date" style="font-weight:bold; margin-right:10px;">📄 20 Oct 2025</span>
+      Student Registration ongoing.
+    </div>
 
-    <!-- Photo / Media Gallery -->
-    <section class="media-gallery" style="padding:50px 0; background:#f9f9f9;">
-        <div class="container">
-            <h4 class="section-subtitle text-center">Notice Related Media</h4>
-            <div class="row">
-                <div class="col-md-3">
-                    <img src="image/notice1.jpg" class="img-responsive img-thumbnail" alt="Notice Media 1">
-                </div>
-                <div class="col-md-3">
-                    <img src="image/notice2.jpg" class="img-responsive img-thumbnail" alt="Notice Media 2">
-                </div>
-                <div class="col-md-3">
-                    <img src="image/notice3.jpg" class="img-responsive img-thumbnail" alt="Notice Media 3">
-                </div>
-                <div class="col-md-3">
-                    <img src="image/notice4.jpg" class="img-responsive img-thumbnail" alt="Notice Media 4">
-                </div>
-            </div>
-        </div>
-    </section> <br>
+    <div class="notice-item" style="margin-bottom:15px; padding:15px; background:#f8f9fa; border-left:5px solid #9112BC; border-radius:6px;">
+      <span class="notice-date" style="font-weight:bold; margin-right:10px;">💻 25 Oct 2025</span>
+      Coding Competition (CST Department).
+    </div>
 
-    <!-- FAQs / Help -->
-    <section class="faq" style="padding:50px 0;">
-        <div class="container">
-            <h4 class="section-subtitle text-center">FAQs / Help</h4>
-            <div class="panel-group" id="faqAccordion">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h5 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#faqAccordion" href="#faq1">
-                                How can I download admission circular?
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="faq1" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            You can download the admission circular from the "Downloadable Notices" section.
-                        </div>
+    <div class="text-center" style="margin-top:20px;">
+      <a href="#" class="btn btn-primary btn-lg">View All Notices</a>
+    </div>
+  </div>
+</section>
+
+<!-- Upcoming Events -->
+<section class="events" style="padding:60px 0; background:#f5f5f5;">
+    <div class="container">
+        <h4 class="section-subtitle text-center" 
+            style="margin-bottom:40px; font-weight:600; color:#9112BC; text-transform:uppercase;">
+            Upcoming Events
+        </h4>
+        <div class="row text-center">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="event-item" style="
+                    background:#fff; 
+                    padding:20px; 
+                    border-radius:10px; 
+                    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+                    transition: transform 0.3s;">
+                    🛠️ Workshop on Electrical – 15 Oct 2025
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="event-item" style="
+                    background:#fff; 
+                    padding:20px; 
+                    border-radius:10px; 
+                    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+                    transition: transform 0.3s;">
+                    🎓 Graduation Ceremony – 30 Nov 2025
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="event-item" style="
+                    background:#fff; 
+                    padding:20px; 
+                    border-radius:10px; 
+                    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+                    transition: transform 0.3s;">
+                    💻 National Coding Challenge – 25 Oct 2025
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Hover effect for events */
+.event-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+</style>
+
+    <!-- Downloadable Notices -->
+<section class="downloads" style="padding:60px 0; background:#f9f9f9;">
+    <div class="container">
+        <h4 class="section-subtitle text-center" style="
+            margin-bottom:40px; 
+            font-weight:600; 
+            color:#9112BC;
+            text-transform:uppercase;
+        ">
+            Downloadable Notices
+        </h4>
+        <div class="download-item" style="
+            background:#fff; 
+            padding:15px 20px; 
+            border-radius:8px; 
+            margin-bottom:15px; 
+            box-shadow:0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        ">
+            <a href="#" style="text-decoration:none; color:#333; font-weight:500;">Admission Circular PDF</a>
+        </div>
+        <div class="download-item" style="
+            background:#fff; 
+            padding:15px 20px; 
+            border-radius:8px; 
+            margin-bottom:15px; 
+            box-shadow:0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        ">
+            <a href="#" style="text-decoration:none; color:#333; font-weight:500;">Exam Schedule PDF</a>
+        </div>
+        <div class="download-item" style="
+            background:#fff; 
+            padding:15px 20px; 
+            border-radius:8px; 
+            margin-bottom:15px; 
+            box-shadow:0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        ">
+            <a href="#" style="text-decoration:none; color:#333; font-weight:500;">Registration Form PDF</a>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Hover effect for download items */
+.download-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+</style>
+
+  
+
+   <!-- Photo / Media Gallery -->
+<section class="media-gallery" style="padding:60px 0; background:#f9f9f9;">
+    <div class="container">
+        <h4 class="section-subtitle text-center" style="margin-bottom:40px; font-weight:600; color:#9112BC; text-transform:uppercase;">
+            Notice Related Media
+        </h4>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <img src="image/156A4541.jpg" class="img-responsive img-thumbnail gallery-img" alt="Notice Media 1">
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <img src="image/Computer-Lab-in-Francis-230-.webp" class="img-responsive img-thumbnail gallery-img" alt="Notice Media 2">
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <img src="image/cybersecurity-computer-science.webp" class="img-responsive img-thumbnail gallery-img" alt="Notice Media 3">
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <img src="image/download (8).jpeg" class="img-responsive img-thumbnail gallery-img" alt="Notice Media 4">
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Make all gallery images same size */
+.gallery-img {
+    width: 100%;
+    height: 200px; /* fixed height for all images */
+    object-fit: cover; /* maintain aspect ratio and crop overflow */
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+/* Optional hover effect for interactivity */
+.gallery-img:hover {
+    transform: scale(1.05);
+}
+</style>
+
+  <!-- FAQs / Help -->
+<section class="faq" style="padding:60px 0; background:#f5f5f5;">
+    <div class="container">
+        <h4 class="section-subtitle text-center" style="
+            margin-bottom:40px; 
+            font-weight:600; 
+            color:#9112BC;
+            text-transform:uppercase;
+        ">
+            FAQs / Help
+        </h4>
+        <div class="panel-group" id="faqAccordion">
+            <div class="panel panel-default" style="border-radius:8px; overflow:hidden; margin-bottom:20px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+                <div class="panel-heading" style="background:#fff; padding:15px;">
+                    <h5 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#faqAccordion" href="#faq1" style="display:block; color:#9112BC; text-decoration:none;">
+                            How can I download admission circular?
+                        </a>
+                    </h5>
+                </div>
+                <div id="faq1" class="panel-collapse collapse">
+                    <div class="panel-body" style="padding:15px; background:#f8f9fa;">
+                        You can download the admission circular from the "Downloadable Notices" section.
                     </div>
                 </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h5 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#faqAccordion" href="#faq2">
-                                Where can I find exam schedules?
-                            </a>
-                        </h5>
-                    </div>
-                    <div id="faq2" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            Exam schedules are available under "Downloadable Notices" or on the notice board in the
-                            institute.
-                        </div>
+            </div>
+
+            <div class="panel panel-default" style="border-radius:8px; overflow:hidden; margin-bottom:20px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+                <div class="panel-heading" style="background:#fff; padding:15px;">
+                    <h5 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#faqAccordion" href="#faq2" style="display:block; color:#9112BC; text-decoration:none;">
+                            Where can I find exam schedules?
+                        </a>
+                    </h5>
+                </div>
+                <div id="faq2" class="panel-collapse collapse">
+                    <div class="panel-body" style="padding:15px; background:#f8f9fa;">
+                        Exam schedules are available under "Downloadable Notices" or on the notice board in the institute.
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<style>
+/* Hover effect for FAQ headings */
+.panel-heading a:hover {
+    color: #d63384; /* darker shade on hover */
+    text-decoration: none;
+}
+</style>
+
 
 
 
